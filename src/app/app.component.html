@@ -1,0 +1,2888 @@
+<div>
+	<div class="content-container">
+		<div id="inner-content-container">
+			<table id="formulaBar" style="width: 100%;">
+				<tbody>
+				<tr>
+					<td style="vertical-align:top;">
+						<input type="text" id="positionbox" disabled="disabled"
+							style="/*text-align: center;*/ padding: 5px; border-width: 0; background-color: rgb(235, 235, 228); height: 36px;">
+					</td>
+					<td style="width: 100%; border-left: 1px solid #ccc;">
+						<div id="formulabox" contenteditable="true" spellcheck="false"
+							style="overflow: hidden; height: 36px; width: 100%; padding: 9px;">
+						</div>
+						<div class="vertical-splitter ui-draggable" id="verticalSplitter"></div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<div class="spread-container" id="controlPanel" style="height:600px; bottom: 0;">
+				<div id="ss" style="height: 100%; border: 1px solid #ddd;"></div>
+			</div>
+		</div>
+		<div class="insp-container">
+			<div>
+				<ul class="nav nav-tabs nav-justified">
+					<li class="insp-cate-tab">
+						<a href="#cellTab" data-toggle="tab" class="localize" aria-expanded="true">Cell</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="cellTab">
+						<div class="insp-pane">
+							<div class="insp-group-layout">
+								<div class="insp-group expanded">
+									<div class="insp-group-title">
+										<span>
+											<span class="group-state fa"></span>
+											<span class="group-text localize">Style</span>
+										</span>
+									</div>
+									<div class="insp-group-content">
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-button-group insp-inline-row">
+														<div class="group-container insp-inline-row-item btn-group btn-group-xs btn-group-justified insp-col-12">
+															<span class="btn btn-default font-bold localize-tooltip" data-name="bold" title="Mark text bold.">B</span>
+															<span class="btn btn-default font-italic localize-tooltip" data-name="italic" title="Mark text italic">I</span>
+															<span class="btn btn-default font-underline localize-tooltip" data-name="underline" title="Underline text.">U</span>
+															<span class="btn btn-default font-overline localize-tooltip" data-name="overline" title="Overline text.">O</span>
+															<span class="btn btn-default font-strikethrough localize-tooltip" data-name="strikethrough" title="Strikethrough text.">S</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-dropdown-list insp-inline-row" data-list-ref="fontFamilyList" data-name="fontFamily">
+														<div class="title insp-inline-row-item insp-col-4 localize">Font</div>
+														<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+															<div style="width: 100%; height: 100%">
+																<span class="display"></span><span class="caret"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-dropdown-list insp-inline-row" data-list-ref="fontSizeList" data-name="fontSize">
+														<div class="title insp-inline-row-item insp-col-4 localize">
+															Size
+														</div>
+														<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+															<div style="width: 100%; height: 100%">
+																<span class="display">11</span><span class="caret"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-color-picker insp-inline-row" data-name="foreColor">
+														<div class="title  insp-inline-row-item insp-col-4 localize">
+															Forecolor
+														</div>
+														<div class="picker insp-inline-row-item insp-col-8">
+															<div style="width: 100%; height: 100%">
+																<div class="color-view" style="background-color: rgb(79, 129, 189);"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-color-picker insp-inline-row show-nofill-color" data-name="backColor">
+														<div class="title  insp-inline-row-item insp-col-4 localize">
+															Backcolor
+														</div>
+														<div class="picker insp-inline-row-item insp-col-8">
+															<div style="width: 100%; height: 100%">
+																<div class="color-view" style="background-color: rgb(255, 255, 255);"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-text insp-inline-row" data-name="cellPadding">
+														<div class="title insp-inline-row-item insp-col-4 localize">
+															Padding
+														</div>
+														<input class="editor insp-inline-row-item insp-col-8" type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-text insp-inline-row" data-name="watermark">
+														<div class="title insp-inline-row-item insp-col-4 localize">
+															Label
+														</div>
+														<input class="editor insp-inline-row-item insp-col-8" type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="insp-group-layout">
+											<div class="insp-group">
+												<div class="insp-group-title">
+													<span>
+												<span class="group-state fa fa-caret-down fa-caret-right"></span>
+													<span class="group-text localize">Label Option</span>
+													</span>
+												</div>
+												<div class="insp-group-content" style="display: none;">
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-button-group insp-inline-row">
+																	<div class="group-container insp-inline-row-item btn-group btn-group-xs btn-group-justified insp-col-12">
+																		<span class="btn btn-default font-bold localize-tooltip" data-name="labelBold" title="Mark text bold.">B</span>
+																		<span class="btn btn-default font-italic localize-tooltip" data-name="labelItalic" title="Mark text italic">I</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-dropdown-list insp-inline-row" data-list-ref="fontFamilyList" data-name="labelFontFamily">
+																	<div class="title insp-inline-row-item insp-col-4 localize">
+																		Font
+																	</div>
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<span class="display"></span><span class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-dropdown-list insp-inline-row" data-list-ref="fontSizeList" data-name="labelFontSize">
+																	<div class="title insp-inline-row-item insp-col-4 localize">
+																		Size
+																	</div>
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<span class="display"></span><span class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-color-picker insp-inline-row" data-name="labelForeColor">
+																	<div class="title  insp-inline-row-item insp-col-4 localize">
+																		Forecolor
+																	</div>
+																	<div class="picker insp-inline-row-item insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<div class="color-view" style="background-color: rgb(79, 129, 189);"></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-text insp-inline-row" data-name="labelMargin">
+																	<div class="title insp-inline-row-item insp-col-4 localize">
+																		Margin
+																	</div>
+																	<input class="editor insp-inline-row-item insp-col-8" type="text">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-dropdown-list insp-inline-row" data-list-ref="cellLabelVisibilityList" data-name="cellLabelVisibility" id="cellLabelVisibility">
+																	<div class="title insp-inline-row-item insp-col-4 localize">
+																		Visibility
+																	</div>
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<span class="display">Visible</span><span class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-dropdown-list insp-inline-row" data-list-ref="cellLabelAlignmentList" data-name="cellLabelAlignment" id="cellLabelAlignment">
+																	<div class="title insp-inline-row-item insp-col-4 localize">
+																		Alignment
+																	</div>
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<span class="display">Top Left</span><span class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="insp-group-layout">
+								<div class="insp-group">
+									<div class="insp-group-title">
+											<span>
+												<span class="group-state fa"></span>
+											<span class="group-text localize">@cellTab.border.title@</span>
+											</span>
+									</div>
+									<div class="insp-group-content">
+										<div>
+											<div class="insp-row">
+												<div class="insp-groups">
+													<div>
+														<div class="group-item">
+															<div class="spread-border-icon-outsideborder image localize-tooltip"
+																data-name="outsideBorder"
+																title="@tooltips.border.outsideBorder@"></div>
+														</div>
+														<div class="group-item">
+															<div class="spread-border-icon-insideborder image localize-tooltip"
+																data-name="insideBorder"
+																title="@tooltips.border.insideBorder@"></div>
+														</div>
+														<div class="group-item">
+															<div class="spread-border-icon-allborder image localize-tooltip"
+																data-name="allBorder"
+																title="@tooltips.border.allBorder@"></div>
+														</div>
+													</div>
+													<div>
+														<div class="group-item">
+															<div class="spread-border-icon-leftborder image localize-tooltip"
+																data-name="leftBorder"
+																title="@tooltips.border.leftBorder@"></div>
+														</div>
+														<div class="group-item">
+															<div class="spread-border-icon-innervertical image localize-tooltip"
+																data-name="innerVerticalBorder"
+																title="@tooltips.border.innerVertical@"></div>
+														</div>
+														<div class="group-item">
+															<div class="spread-border-icon-rightborder image localize-tooltip"
+																data-name="rightBorder"
+																title="@tooltips.border.rightBorder@"></div>
+														</div>
+													</div>
+													<div>
+														<div class="group-item">
+															<div class="spread-border-icon-topborder image localize-tooltip"
+																data-name="topBorder"
+																title="@tooltips.border.topBorder@"></div>
+														</div>
+														<div class="group-item">
+															<div class="spread-border-icon-innerhorizontal image localize-tooltip"
+																data-name="innerHorizontalBorder"
+																title="@tooltips.border.innerHorizontal@"></div>
+														</div>
+														<div class="group-item">
+															<div class="spread-border-icon-bottomborder image localize-tooltip"
+																data-name="bottomBorder"
+																title="@tooltips.border.bottomBorder@"></div>
+														</div>
+													</div>
+												</div>
+												<div class="insp-groups right-border-group">
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-dropdown-list insp-inline-row"
+																	data-list-ref="borderLineList" data-name="borderLine"
+																	id="borderLineType">
+																	<div class="title insp-inline-row-item insp-col-4 localize">
+																		@cellTab.border.rangeBorderLine@
+																	</div>
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<div id="border-line-type"></div>
+																			<span class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<div class="insp-row">
+															<div>
+																<div class="insp-color-picker insp-inline-row"
+																	data-name="borderColor">
+																	<div class="title  insp-inline-row-item insp-col-4 localize">
+																		@cellTab.border.rangeBorderColor@
+																	</div>
+																	<div class="picker insp-inline-row-item insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<div class="color-view"
+																				style="background-color: rgb(0, 0, 0);"></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="insp-group-layout">
+								<div class="insp-group">
+									<div class="insp-group-title">
+											<span>
+												<span class="group-state fa"></span>
+											<span class="group-text localize">@cellTab.alignment.title@</span>
+											</span>
+									</div>
+									<div class="insp-group-content">
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-radio-button-group insp-inline-row" data-name="vAlign">
+														<div class="group-container insp-inline-row-item btn-group btn-group-xs btn-group-justified insp-col-12">
+																<span class="btn btn-default btn-icon localize-tooltip"
+																	data-name="top" title="@tooltips.alignment.topAlign@">
+																	<span class="ui-icon smallicon icon-topalign"></span>
+																</span>
+															<span class="btn btn-default btn-icon localize-tooltip"
+																data-name="middle"
+																title="@tooltips.alignment.middleAlign@">
+																	<span class="ui-icon smallicon icon-middlealign"></span>
+																</span>
+															<span class="btn btn-default btn-icon localize-tooltip"
+																data-name="bottom"
+																title="@tooltips.alignment.bottomAlign@">
+																	<span class="ui-icon smallicon icon-bottomalign"></span>
+																</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-radio-button-group insp-inline-row" data-name="hAlign">
+														<div class="group-container insp-inline-row-item btn-group btn-group-xs btn-group-justified insp-col-12">
+																<span class="btn btn-default btn-icon localize-tooltip"
+																	data-name="left"
+																	title="@tooltips.alignment.leftAlign@">
+																	<span class="ui-icon smallicon icon-leftalign"></span>
+																</span>
+															<span class="btn btn-default btn-icon localize-tooltip"
+																data-name="center"
+																title="@tooltips.alignment.centerAlign@">
+																	<span class="ui-icon smallicon icon-centeralign"></span>
+																</span>
+															<span class="btn btn-default btn-icon localize-tooltip"
+																data-name="right"
+																title="@tooltips.alignment.rightAlign@">
+																	<span class="ui-icon smallicon icon-rightalign"></span>
+																</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-button-group insp-inline-row">
+														<div class="group-container insp-inline-row-item btn-group btn-group-xs btn-group-justified insp-col-12">
+																<span class="btn btn-default btn-icon no-toggle localize-tooltip"
+																	data-name="decreaseIndent"
+																	title="@tooltips.alignment.decreaseIndent@">
+																	<span class="ui-icon smallicon icon-decreaseindent"></span>
+																</span>
+															<span class="btn btn-default btn-icon no-toggle localize-tooltip"
+																data-name="increaseIndent"
+																title="@tooltips.alignment.increaseIndent@">
+																	<span class="ui-icon smallicon icon-increaseindent"></span>
+																</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-checkbox insp-inline-row" data-name="wrapText">
+														<div class="button insp-inline-row-item"></div>
+														<div class="text   insp-inline-row-item localize">
+															@cellTab.alignment.wrapText@
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="insp-group-layout">
+								<div class="insp-group">
+									<div class="insp-group-title">
+											<span>
+												<span class="group-state fa"></span>
+											<span class="group-text localize">@cellTab.format.title@</span>
+											</span>
+									</div>
+									<div class="insp-group-content">
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-dropdown-list insp-inline-row"
+														data-list-ref="commomFormatList" data-name="commomFormat"
+														id="commomFormatType">
+														<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+															<div style="width: 100%; height: 100%">
+																<span class="display"></span><span class="caret"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-button-group insp-inline-row">
+														<div class="group-container insp-inline-row-item btn-group btn-group-xs btn-group-justified insp-col-12">
+																<span class="btn btn-default btn-icon no-toggle localize-tooltip"
+																	data-name="percentStyle"
+																	title="@tooltips.format.percentStyle@">
+																	<span class="ui-icon smallicon icon-percentstyle"></span>
+																</span>
+															<span class="btn btn-default btn-icon no-toggle localize-tooltip"
+																data-name="commaStyle"
+																title="@tooltips.format.commaStyle@">
+																	<span class="ui-icon smallicon icon-commastyle"></span>
+																</span>
+															<span class="btn btn-default btn-icon no-toggle localize-tooltip"
+																data-name="increaseDecimal"
+																title="@tooltips.format.increaseDecimal@">
+																	<span class="ui-icon smallicon icon-increasedecimal"></span>
+																</span>
+															<span class="btn btn-default btn-icon no-toggle localize-tooltip"
+																data-name="decreaseDecimal"
+																title="@tooltips.format.decreaseDecimal@">
+																	<span class="ui-icon smallicon icon-decreasedecimal"></span>
+																</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="group-item-divider"></div>
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-text insp-inline-row" data-name="customFormat">
+														<div class="title insp-inline-row-item insp-col-4 localize">
+															@cellTab.format.custom@
+														</div>
+														<input class="editor insp-inline-row-item insp-col-8" type="text">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Merge cells-->
+							<div class="insp-group-layout">
+								<div class="insp-group">
+									<div class="insp-group-title">
+											<span>
+												<span class="group-state fa"></span>
+											<span class="group-text localize">@cellTab.merge.title@</span>
+											</span>
+									</div>
+									<div class="insp-group-content">
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-buttons insp-inline-row">
+														<div class="insp-inline-row-item content">
+															<div class="item">
+																<div class="button btn btn-default localize" id="mergeCells"
+																		disabled="disabled">@cellTab.merge.mergeCells@
+																</div>
+															</div>
+															<div class="item">
+																<div class="button btn btn-default localize"
+																		id="unmergeCells" disabled="disabled">
+																	@cellTab.merge.unmergeCells@
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Cell type-->
+							 <div class="insp-group-layout">
+								<div class="insp-group">
+									<div class="insp-group-title">
+											<span id="groupCellType">
+												<span class="group-state fa"></span>
+											<span class="group-text localize">@cellTab.cellType.title@</span>
+											</span>
+									</div>
+									<div class="insp-group-content">
+										<div>
+											<div class="insp-row">
+												<div>
+													<div class="insp-dropdown-list insp-inline-row"
+														data-list-ref="cellTypesList" data-name="cellTypes" id="cellTypes">
+														<div class="title insp-inline-row-item insp-col-4 localize">
+															@cellTypes.title@
+														</div>
+														<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+															<div style="width: 100%; height: 100%">
+																<span class="display"></span>
+																<span class="caret"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="cellTypeSettingContainer">
+											<div id="celltype-button">
+												<div class="group-item-divider"></div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-number insp-inline-row"
+																data-name="buttonCellTypeMarginTop">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.buttonCellType.values.marginTop@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6"
+																	type="number" value="2">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-number insp-inline-row"
+																data-name="buttonCellTypeMarginRight">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.buttonCellType.values.marginRight@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6"
+																	type="number" value="4">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-number insp-inline-row"
+																data-name="buttonCellTypeMarginBottom">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.buttonCellType.values.marginBottom@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6"
+																	type="number" value="2">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-number insp-inline-row"
+																data-name="buttonCellTypeMarginLeft">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.buttonCellType.values.marginLeft@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6"
+																	type="number" value="4">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="buttonCellTypeText">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.buttonCellType.values.text@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6 localize-value"
+																	type="text" value="@defaultTexts.buttonText@">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-color-picker insp-inline-row"
+																data-name="buttonCellTypeBackColor">
+																<div class="title  insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.buttonCellType.values.backColor@
+																</div>
+																<div class="picker insp-inline-row-item insp-col-6">
+																	<div style="width: 100%; height: 100%">
+																		<div class="color-view "
+																			style="background-color: rgb(242, 242, 242);"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="celltype-checkbox">
+												<div class="group-item-divider"></div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="checkboxCellTypeCaption">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.checkBoxCellType.values.caption@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6 localize-value"
+																	type="text" value="@defaultTexts.checkCaption@">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="checkboxCellTypeTextTrue">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.checkBoxCellType.values.textTrue@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6"
+																	type="text">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="checkboxCellTypeTextIndeterminate">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.checkBoxCellType.values.textIndeterminate@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6"
+																	type="text">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="checkboxCellTypeTextFalse">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.checkBoxCellType.values.textFalse@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6"
+																	type="text">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-dropdown-list insp-inline-row"
+																data-list-ref="checkboxCellTypeTextAlignList"
+																data-name="checkboxCellTypeTextAlign"
+																id="checkboxCellTypeTextAlignOption">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.checkBoxCellType.values.textAlign.title@
+																</div>
+																<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-6">
+																	<div style="width: 100%; height: 100%">
+																		<span class="display"></span>
+																		<span class="caret"></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-checkbox insp-inline-row"
+																data-name="checkboxCellTypeIsThreeState">
+																<div class="button insp-inline-row-item"></div>
+																<div class="text insp-inline-row-item localize">
+																	@cellTypes.checkBoxCellType.values.isThreeState@
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="celltype-combobox">
+												<div class="group-item-divider"></div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-dropdown-list insp-inline-row"
+																data-list-ref="comboboxCellTypeEditorValueTypeList"
+																data-name="comboboxCellTypeEditorValueType"
+																id="comboboxCellTypeEditorValueTypeOption">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.comboBoxCellType.values.editorValueType.title@
+																</div>
+																<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-6">
+																	<div style="width: 100%; height: 100%">
+																		<span class="display"></span>
+																		<span class="caret"></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="comboboxCellTypeItemsText">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.comboBoxCellType.values.itemsText@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6 localize-value"
+																	type="text" placeholder="(eg:123,456,789)"
+																	value="@defaultTexts.comboText@">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="comboboxCellTypeItemsValue">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.comboBoxCellType.values.itemsValue@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6 localize-value"
+																	type="text" placeholder="(eg:abc,def,ghi)"
+																	value="@defaultTexts.comboValue@">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="celltype-hyperlink">
+												<div class="group-item-divider"></div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-color-picker insp-inline-row"
+																data-name="hyperlinkCellTypeLinkColor">
+																<div class="title  insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.hyperlinkCellType.values.linkColor@
+																</div>
+																<div class="picker insp-inline-row-item insp-col-6">
+																	<div style="width: 100%; height: 100%">
+																		<div class="color-view "
+																			style="background-color: rgb(0, 102, 204);"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-color-picker insp-inline-row"
+																data-name="hyperlinkCellTypeVisitedLinkColor">
+																<div class="title  insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.hyperlinkCellType.values.visitedLinkColor@
+																</div>
+																<div class="picker insp-inline-row-item insp-col-6">
+																	<div style="width: 100%; height: 100%">
+																		<div class="color-view "
+																			style="background-color: rgb(51, 153, 255);"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="hyperlinkCellTypeText">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.hyperlinkCellType.values.text@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6 localize-value"
+																	type="text" value="@defaultTexts.hyperlinkText@">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="insp-row">
+														<div>
+															<div class="insp-text insp-inline-row"
+																data-name="hyperlinkCellTypeLinkToolTip">
+																<div class="title insp-inline-row-item insp-col-6 localize">
+																	@cellTypes.hyperlinkCellType.values.linkToolTip@
+																</div>
+																<input class="editor insp-inline-row-item insp-col-6 localize-value"
+																	type="text" value="@defaultTexts.hyperlinkToolTip@">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="setCellTypeContainer">
+												<div class="group-item-divider"></div>
+												<div class="insp-row insp-col-offset-8">
+													<div class="button btn btn-default group-set localize"
+														id="setCellTypeBtn">@cellTypes.setButton@
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--conditionl formattin -->
+							<div class="insp-group-layout">
+								<div class="insp-group">
+									<div class="insp-group-title">
+											<span>
+												<span class="group-state fa"></span>
+											<span class="group-text localize">@cellTab.conditionalFormat.title@</span>
+											</span>
+									</div>
+									<div class="insp-group-content">
+										<div id="conditionalFormatSettingContainer">
+											<div>
+												<div class="insp-row">
+													<div>
+														<div class="insp-dropdown-list insp-inline-row"
+															data-list-ref="conditionalFormatList"
+															data-name="conditionalFormat" id="conditionalFormatType">
+															<div class="title insp-inline-row-item insp-col-4 localize">
+																@conditionalFormat.ruleTypes.title@
+															</div>
+															<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																<div style="width: 100%; height: 100%">
+																	<span class="display"></span><span class="caret"></span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="details">
+												<div class="group-item-divider"></div>
+												<div class="settingGroup">
+													<div class="conditionalformat-content-style groupitem"
+														data-group="normal">
+														<div>
+															<div class="insp-row">
+																<span id="ruletext" class="dialog-content-title"></span>
+															</div>
+														</div>
+														<div>
+															<div class="insp-row">
+																<div class="insp-dropdown-list insp-inline-row"
+																	data-list-ref="highlightCellsRulesList"
+																	data-name="ruleType" id="highlightCellsRule">
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																		<div style="width: 100%; height: 100%">
+																			<span class="display"></span><span
+																				class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div>
+															<div class="insp-row">
+																<div class="insp-dropdown-list insp-inline-row"
+																	data-list-ref="highlightCellsRulesOperatorList"
+																	data-name="comparisonOperator" id="ComparisonOperator">
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																		<div style="width: 100%; height: 100%">
+																			<span class="display"></span><span
+																				class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div>
+															<div class="insp-row">
+																<div class="insp-text insp-inline-row">
+																	<input class="editor insp-inline-row-item insp-col-5"
+																		id="value1" type="text">
+																	<div class="text insp-inline-row-item insp-col-2 center-align localize"
+																		id="andtext">@conditionalFormat.texts.and@
+																	</div>
+																	<input class="editor insp-inline-row-item insp-col-5"
+																		id="value2" type="text">
+																</div>
+																<div class="text insp-inline-row-item insp-col-12"
+																	id="formattext"></div>
+															</div>
+														</div>
+
+														<div id="formatSetting">
+															<div class="insp-row">
+																<span id="withtext" class="localize">@conditionalFormat.texts.formatStyle@</span>
+															</div>
+															<div class="insp-row">
+																<div>
+																	<div class="insp-color-picker insp-inline-row"
+																		data-name="formatForeColor">
+																		<div class="title insp-inline-row-item insp-col-6">
+																			<div class="insp-checkbox insp-inline-row"
+																				data-name="useFormatForeColor">
+																				<div class="button insp-inline-row-item checked"></div>
+																				<div class="text insp-inline-row-item localize">
+																					@conditionalFormat.formatSetting.formatUseForeColor@
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="picker insp-inline-row-item insp-col-6">
+																			<div style="width: 100%; height: 100%">
+																				<div class="color-view"
+																					style="background-color: rgb(0, 128, 0);"></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="insp-row">
+																<div>
+																	<div class="insp-color-picker insp-inline-row"
+																		data-name="formatBackColor">
+																		<div class="title insp-inline-row-item insp-col-6">
+																			<div class="insp-checkbox insp-inline-row"
+																				data-name="useFormatBackColor">
+																				<div class="button insp-inline-row-item checked"></div>
+																				<div class="text insp-inline-row-item localize">
+																					@conditionalFormat.formatSetting.formatUseBackColor@
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="picker insp-inline-row-item insp-col-6">
+																			<div style="width: 100%; height: 100%">
+																				<div class="color-view"
+																					style="background-color: rgb(255, 0, 0);"></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="insp-row">
+																<div>
+																	<div class="insp-color-picker insp-inline-row"
+																		data-name="formatBorderColor">
+																		<div class="title insp-inline-row-item insp-col-6">
+																			<div class="insp-checkbox insp-inline-row"
+																				data-name="useFormatBorder">
+																				<div class="button insp-inline-row-item"></div>
+																				<div class="text insp-inline-row-item localize">
+																					@conditionalFormat.formatSetting.formatUseBorder@
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="picker insp-inline-row-item insp-col-6">
+																			<div style="width: 100%; height: 100%">
+																				<div class="color-view"
+																					style="background-color: rgb(255, 199, 206);"></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div id="colorScale" class="dialog-content-notshow">
+															<div>
+																<div>
+																	<div class="insp-row">
+																		<span class="groupheader localize">@conditionalFormat.ruleTypes.colorScales.labels.minimum@</span>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-dropdown-list insp-inline-row"
+																				data-list-ref="colorScaleMinTypeList"
+																				data-name="minType">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.type@
+																				</div>
+																				<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																					<div style="width: 100%; height: 100%">
+																						<span class="display"></span><span
+																							class="caret"></span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-text insp-inline-row"
+																				data-name="minValue">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.value@
+																				</div>
+																				<input class="editor insp-inline-row-item insp-col-8"
+																					type="text">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-color-picker insp-inline-row"
+																				data-name="minColor">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.color@
+																				</div>
+																				<div class="picker insp-inline-row-item insp-col-8">
+																					<div style="width: 100%; height: 100%">
+																						<div class="color-view"
+																							style="background-color: rgb(248, 105, 107);"></div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div id="midpoint">
+																<div>
+																	<div class="insp-row">
+																		<span class="groupheader localize">@conditionalFormat.ruleTypes.colorScales.labels.midpoint@</span>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-dropdown-list insp-inline-row"
+																				data-list-ref="colorScaleMidTypeList"
+																				data-name="midType">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.type@
+																				</div>
+																				<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																					<div style="width: 100%; height: 100%">
+																						<span class="display"></span><span
+																							class="caret"></span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-text insp-inline-row"
+																				data-name="midValue">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.value@
+																				</div>
+																				<input class="editor insp-inline-row-item insp-col-8"
+																					type="text" value="50">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-color-picker insp-inline-row"
+																				data-name="midColor">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.color@
+																				</div>
+																				<div class="picker insp-inline-row-item insp-col-8">
+																					<div style="width: 100%; height: 100%">
+																						<div class="color-view"
+																							style="background-color: rgb(255, 235, 132);"></div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div>
+																<div>
+																	<div class="insp-row">
+																		<span class="groupheader localize">@conditionalFormat.ruleTypes.colorScales.labels.maximum@</span>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-dropdown-list insp-inline-row"
+																				data-list-ref="colorScaleMaxTypeList"
+																				data-name="maxType">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.type@
+																				</div>
+																				<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																					<div style="width: 100%; height: 100%">
+																						<span class="display"></span><span
+																							class="caret"></span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-text insp-inline-row"
+																				data-name="maxValue">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.value@
+																				</div>
+																				<input class="editor insp-inline-row-item insp-col-8"
+																					type="text">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div>
+																	<div class="insp-row">
+																		<div class="insp-col-offset-1">
+																			<div class="insp-color-picker insp-inline-row"
+																				data-name="maxColor">
+																				<div class="title insp-inline-row-item insp-col-4 localize">
+																					@conditionalFormat.ruleTypes.colorScales.labels.color@
+																				</div>
+																				<div class="picker insp-inline-row-item insp-col-8">
+																					<div style="width: 100%; height: 100%">
+																						<div class="color-view"
+																							style="background-color: rgb(99, 190, 123);"></div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="databar-content-style groupitem" data-group="databar">
+														<div>
+															<div>
+																<div class="insp-row">
+																	<span class="groupheader localize">@conditionalFormat.ruleTypes.dataBars.labels.minimum@</span>
+																</div>
+															</div>
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="dataBarMinimumTypeList"
+																			data-name="minimumType">
+																			<div class="title insp-inline-row-item insp-col-6 localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.type@
+																			</div>
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-number insp-inline-row"
+																			data-name="minimumValue">
+																			<div class="title insp-inline-row-item insp-col-6 localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.value@
+																			</div>
+																			<input class="editor insp-inline-row-item insp-col-6"
+																				type="number">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div>
+															<div>
+																<div class="insp-row">
+																	<span class="groupheader localize">@conditionalFormat.ruleTypes.dataBars.labels.maximum@</span>
+																</div>
+															</div>
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="dataBarMaximumTypeList"
+																			data-name="maximumType">
+																			<div class="title insp-inline-row-item insp-col-6 localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.type@
+																			</div>
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-number insp-inline-row"
+																			data-name="maximumValue">
+																			<div class="title insp-inline-row-item insp-col-6 localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.value@
+																			</div>
+																			<input class="editor insp-inline-row-item insp-col-6"
+																				type="number">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div>
+															<div>
+																<div class="insp-row">
+																	<span class="groupheader localize">@conditionalFormat.ruleTypes.dataBars.labels.appearance@</span>
+																</div>
+															</div>
+
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-checkbox insp-inline-row"
+																			data-name="showBarOnly">
+																			<div class="button insp-inline-row-item"></div>
+																			<div class="text   insp-inline-row-item localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.showBarOnly@
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-color-picker insp-inline-row"
+																			data-name="gradientColor">
+																			<div class="title insp-inline-row-item insp-col-6">
+																				<div class="insp-checkbox insp-inline-row"
+																					data-name="gradient">
+																					<div class="button insp-inline-row-item"></div>
+																					<div class="text   insp-inline-row-item localize">
+																						@conditionalFormat.ruleTypes.dataBars.labels.useGradient@
+																					</div>
+																				</div>
+																			</div>
+
+																			<div class="picker insp-inline-row-item insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<div class="color-view"
+																						style="background-color: rgb(99, 190, 123);"></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-color-picker insp-inline-row"
+																			data-name="barBorderColor">
+																			<div class="title insp-inline-row-item insp-col-6">
+																				<div class="insp-checkbox insp-inline-row"
+																					data-name="showBorder">
+																					<div class="button insp-inline-row-item"></div>
+																					<div class="text   insp-inline-row-item localize">
+																						@conditionalFormat.ruleTypes.dataBars.labels.showBorder@
+																					</div>
+																				</div>
+																			</div>
+																			<div class="picker insp-inline-row-item insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<div class="color-view"
+																						style="background-color: rgb(0, 0, 0);"></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="dataBarDirectionList"
+																			data-name="dataBarDirection">
+																			<div class="title insp-inline-row-item insp-col-6 localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.barDirection@
+																			</div>
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-color-picker insp-inline-row"
+																			data-name="negativeFillColor">
+																			<div class="title insp-inline-row-item insp-col-6">
+																				<div class="insp-checkbox insp-inline-row"
+																					data-name="useNegativeFillColor">
+																					<div class="button insp-inline-row-item"></div>
+																					<div class="text   insp-inline-row-item localize">
+																						@conditionalFormat.ruleTypes.dataBars.labels.negativeFillColor@
+																					</div>
+																				</div>
+																			</div>
+
+																			<div class="picker insp-inline-row-item insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<div class="color-view"
+																						style="background-color: rgb(255, 0, 0);"></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-color-picker insp-inline-row"
+																			data-name="negativeBorderColor">
+																			<div class="title insp-inline-row-item insp-col-6">
+																				<div class="insp-checkbox insp-inline-row"
+																					data-name="useNegativeBorderColor">
+																					<div class="button insp-inline-row-item"></div>
+																					<div class="text   insp-inline-row-item localize">
+																						@conditionalFormat.ruleTypes.dataBars.labels.negativeBorderColor@
+																					</div>
+																				</div>
+																			</div>
+																			<div class="picker insp-inline-row-item insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<div class="color-view"
+																						style="background-color: rgb(0, 0, 0);"></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div>
+															<div>
+																<div class="insp-row">
+																	<span class="groupheader localize">@conditionalFormat.ruleTypes.dataBars.labels.axis@</span>
+																</div>
+															</div>
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="dataBarAxisPositionList"
+																			data-name="axisPosition">
+																			<div class="title insp-inline-row-item insp-col-6 localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.axisPosition@
+																			</div>
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div>
+																<div class="insp-row">
+																	<div class="insp-col-offset-1">
+																		<div class="insp-color-picker insp-inline-row"
+																			data-name="barAxisColor">
+																			<div class="title insp-inline-row-item insp-col-6 localize">
+																				@conditionalFormat.ruleTypes.dataBars.labels.axisColor@
+																			</div>
+																			<div class="picker insp-inline-row-item insp-col-6">
+																				<div style="width: 100%; height: 100%">
+																					<div class="color-view"
+																						style="background-color: rgb(0, 0, 0);"></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="iconset-content-style groupitem" data-group="iconset">
+														<div>
+															<div class="insp-row">
+																<div class="insp-dropdown-list insp-inline-row"
+																	data-list-ref="iconSetTypeList"
+																	data-name="iconSetType">
+																	<div class="title insp-inline-row-item insp-col-4 localize">
+																		@conditionalFormat.ruleTypes.iconSets.labels.style@
+																	</div>
+																	<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-8">
+																		<div style="width: 100%; height: 100%">
+																			<span class="display"></span><span
+																				class="caret"></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div>
+															<div class="insp-row">
+																<div class="insp-checkbox insp-inline-row"
+																	data-name="showIconOnly">
+																	<div class="button insp-inline-row-item"></div>
+																	<div class="text   insp-inline-row-item localize">
+																		@conditionalFormat.ruleTypes.iconSets.labels.showIconOnly@
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div>
+															<div class="insp-row">
+																<div class="insp-checkbox insp-inline-row"
+																	data-name="reverseIconOrder">
+																	<div class="button insp-inline-row-item"></div>
+																	<div class="text   insp-inline-row-item localize">
+																		@conditionalFormat.ruleTypes.iconSets.labels.reverseIconOrder@
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div>
+															<div class="insp-row">
+																<span class="localize">@conditionalFormat.texts.showIconWithRules@</span>
+															</div>
+														</div>
+
+														<div id="iconCriteriaSetting">
+															<div class="settinggroup">
+																<div class="insp-row">
+																	<div class="insp-inline-row-item insp-col-3">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaOperatorList"
+																			data-name="iconSetCriteriaOperator1">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display">>=</span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<input class="editor insp-inline-row-item insp-col-12"
+																			type="number">
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaTypeList"
+																			data-name="iconSetCriteriaType1">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="settinggroup">
+																<div class="insp-row">
+																	<div class="insp-inline-row-item insp-col-3">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaOperatorList"
+																			data-name="iconSetCriteriaOperator2">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display">>=</span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<input class="editor insp-inline-row-item insp-col-12"
+																			type="number">
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaTypeList"
+																			data-name="iconSetCriteriaType2">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="settinggroup">
+																<div class="insp-row">
+																	<div class="insp-inline-row-item insp-col-3">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaOperatorList"
+																			data-name="iconSetCriteriaOperator3">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display">>=</span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<input class="editor insp-inline-row-item insp-col-12"
+																			type="number">
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaTypeList"
+																			data-name="iconSetCriteriaType3">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="settinggroup">
+																<div class="insp-row">
+																	<div class="insp-inline-row-item insp-col-3">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaOperatorList"
+																			data-name="iconSetCriteriaOperator4">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display">>=</span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<input class="editor insp-inline-row-item insp-col-12"
+																			type="number">
+																	</div>
+																	<div class="insp-inline-row-item insp-col-4">
+																		<div class="insp-dropdown-list insp-inline-row"
+																			data-list-ref="iconSetCriteriaTypeList"
+																			data-name="iconSetCriteriaType4">
+																			<div class="dropdown insp-inline-row-item btn btn-default insp-text-right insp-col-12">
+																				<div style="width: 100%; height: 100%">
+																					<span class="display"></span><span
+																						class="caret"></span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="group-item-divider"></div>
+												<div class="insp-row insp-col-offset-8">
+													<div class="button btn btn-default group-set localize"
+														id="setConditionalFormat">@conditionalFormat.setButton@
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="setfontstyle" style="display: none"></div>
+	<div id="colorpicker" class="colorpicker" style="left: 983.75px; top: 88px;">
+		<div class="cp-pointer right" style="left: 246px; top: 222px;"></div>
+		<div class="cp-container">
+			<div class="tab-content">
+				<div id="theme-color" class="tab-pane active">
+					<div class="color-cells-container">
+						<h2 class="color-group-header localize">@colorPicker.themeColors@</h2>
+						<ul id="default-theme-color">
+						</ul>
+					</div>
+					<div class="colorpicker-standard-color">
+						<h2 class="color-group-header localize">@colorPicker.standardColors@</h2>
+						<div class="cp-indent">
+							<ul>
+								<li class="color-cell standard-color-cell" style="background-color: rgb(192, 0, 0);"></li>
+
+								<li class="color-cell standard-color-cell" style="background-color: rgb(255, 0, 0);"></li>
+
+								<li class="color-cell standard-color-cell" style="background-color: rgb(255, 192, 0);"></li>
+
+								<li class="color-cell standard-color-cell" style="background-color: rgb(255, 255, 0);"></li>
+
+								<li class="color-cell standard-color-cell"
+									style="background-color: rgb(146, 208, 80);"></li>
+
+								<li class="color-cell standard-color-cell" style="background-color: rgb(0, 176, 80);"></li>
+
+								<li class="color-cell standard-color-cell" style="background-color: rgb(0, 176, 240);"></li>
+
+								<li class="color-cell standard-color-cell" style="background-color: rgb(0, 112, 192);"></li>
+
+								<li class="color-cell standard-color-cell" style="background-color: rgb(0, 32, 96);"></li>
+
+								<li class="color-cell standard-color-cell"
+									style="background-color: rgb(112, 48, 160);"></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="nofill-color">
+						<ul>
+							<li class="color-cell auto-color-cell localize">@colorPicker.noFills@</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="insp-menu" role="menu" id="fontFamilyList">
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text">Arial</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Arial Black</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Calibri</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Cambria</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Century</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Courier New</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Comic Sans MS</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Garamond</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Georgia</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Malgun Gothic</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Mangal</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Meiryo</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">MS Gothic</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">MS Mincho</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">MS PGothic</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">MS PMincho</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Roboto</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Tahoma</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Times</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Times New Roman</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Trebuchet MS</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Verdana</div>
+			<div class="shortcut"></div>
+		</div>
+
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">Wingdings</div>
+			<div class="shortcut"></div>
+		</div>
+
+	</div>
+	<div class="insp-menu" role="menu" id="fontSizeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">8</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">9</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text">10</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">11</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">12</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">13</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">14</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">15</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">16</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">18</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">20</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">22</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">24</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">26</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">28</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">36</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">48</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text">72</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<div class="insp-menu" role="menu" id="cellLabelVisibilityList">
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="visible">@cellTab.style.cellLabel.visibilityOption.visible@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="hidden">@cellTab.style.cellLabel.visibilityOption.hidden@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="auto">@cellTab.style.cellLabel.visibilityOption.auto@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<div class="insp-menu" role="menu" id="cellLabelAlignmentList">
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="topLeft">@cellTab.style.cellLabel.alignmentOption.topLeft@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="topCenter">@cellTab.style.cellLabel.alignmentOption.topCenter@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="topRight">@cellTab.style.cellLabel.alignmentOption.topRight@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="bottomLeft">@cellTab.style.cellLabel.alignmentOption.bottomLeft@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="bottomCenter">@cellTab.style.cellLabel.alignmentOption.bottomCenter@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="bottomRight">@cellTab.style.cellLabel.alignmentOption.bottomRight@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<div class="insp-menu border-line-menu" role="menu" id="borderLineList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize no-border-margin" data-value="none">
+				<div class="no-border">@cellTab.border.noBorder@</div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="hair">
+				<div class="line-style-hair"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="dotted">
+				<div class="line-style-dotted"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="dash-dot-dot">
+				<div class="line-style-dash-dot-dot"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="dash-dot">
+				<div class="line-style-dash-dot"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="dashed">
+				<div class="line-style-dashed"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="thin">
+				<div class="line-style-thin"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="medium-dash-dot-dot">
+				<div class="line-style-medium-dash-dot-dot"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="slanted-dash-dot">
+				<div class="line-style-slanted-dash-dot"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="medium-dash-dot">
+				<div class="line-style-medium-dash-dot"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="medium-dashed">
+				<div class="line-style-medium-dashed"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="medium">
+				<div class="line-style-medium"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="thick">
+				<div class="line-style-thick"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text" data-value="double">
+				<div class="line-style-double"></div>
+			</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!--common format list-->
+	<div class="insp-menu" role="menu" id="commomFormatList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="nullValue">@cellTab.format.commonFormat.option.general@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0.00">@cellTab.format.commonFormat.option.number@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="$#,##0.00">@cellTab.format.commonFormat.option.currency@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="$ #,##0.00;$ (#,##0.00);$ '-'??;@">
+				@cellTab.format.commonFormat.option.accounting@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="m/d/yyyy">@cellTab.format.commonFormat.option.shortDate@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="dddd, mmmm dd, yyyy">@cellTab.format.commonFormat.option.longDate@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="h:mm:ss AM/PM">@cellTab.format.commonFormat.option.time@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0%">@cellTab.format.commonFormat.option.percentage@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="# ?/?">@cellTab.format.commonFormat.option.fraction@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0.00E+00">@cellTab.format.commonFormat.option.scientific@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="@">@cellTab.format.commonFormat.option.text@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!--cell type list-->
+	<div class="insp-menu" role="menu" id="cellTypesList">
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="button-celltype">@cellTypes.buttonCellType.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="checkbox-celltype">@cellTypes.checkBoxCellType.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="combobox-celltype">@cellTypes.comboBoxCellType.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="hyperlink-celltype">@cellTypes.hyperlinkCellType.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item divider">
+			<div class="image"></div>
+			<div class="text"></div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image nocheck"></div>
+			<div class="text localize" data-value="clear-celltype">@cellTypes.clearCellType.title@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!--checkboxCellTypeTextAlignList-->
+	<div class="insp-menu" role="menu" id="checkboxCellTypeTextAlignList">
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="0">@cellTypes.checkBoxCellType.values.textAlign.values.top@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="1">@cellTypes.checkBoxCellType.values.textAlign.values.bottom@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="2">@cellTypes.checkBoxCellType.values.textAlign.values.left@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="3">@cellTypes.checkBoxCellType.values.textAlign.values.right@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!--comboboxCellTypeEditorValueTypeList-->
+	<div class="insp-menu" role="menu" id="comboboxCellTypeEditorValueTypeList">
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="0">@cellTypes.comboBoxCellType.values.editorValueType.values.text@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="1">@cellTypes.comboBoxCellType.values.editorValueType.values.index@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="2">@cellTypes.comboBoxCellType.values.editorValueType.values.value@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- conditional formatting list-->
+	<div class="insp-menu" role="menu" id="conditionalFormatList">
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="highlight-cells-rules">
+				@conditionalFormat.ruleTypes.highlightCells.title@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="top-bottom-rules">@conditionalFormat.ruleTypes.topBottom.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="data-bars">@conditionalFormat.ruleTypes.dataBars.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="color-scales">@conditionalFormat.ruleTypes.colorScales.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image fa fa-check"></div>
+			<div class="text localize" data-value="icon-sets">@conditionalFormat.ruleTypes.iconSets.title@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item divider">
+			<div class="image"></div>
+			<div class="text"></div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image nocheck"></div>
+			<div class="text localize" data-value="remove-conditional-formats">
+				@conditionalFormat.ruleTypes.removeConditionalFormat.title@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- highlightCellsRulesList -->
+	<div class="insp-menu" role="menu" id="highlightCellsRulesList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.highlightCells.values.cellValue@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.ruleTypes.highlightCells.values.specificText@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.ruleTypes.highlightCells.values.dateOccurring@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="5">@conditionalFormat.ruleTypes.highlightCells.values.unique@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.ruleTypes.highlightCells.values.duplicate@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- cellValueOperatorList -->
+	<div class="insp-menu" role="menu" id="cellValueOperatorList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.operators.cellValue.types.equalsTo@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.operators.cellValue.types.notEqualsTo@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.operators.cellValue.types.greaterThan@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.operators.cellValue.types.greaterThanOrEqualsTo@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.operators.cellValue.types.lessThan@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="5">@conditionalFormat.operators.cellValue.types.lessThanOrEqualsTo@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.operators.cellValue.types.between@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="7">@conditionalFormat.operators.cellValue.types.notBetween@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- specificTextOperatorList -->
+	<div class="insp-menu" role="menu" id="specificTextOperatorList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.operators.specificText.types.contains@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.operators.specificText.types.doesNotContain@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.operators.specificText.types.beginsWith@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.operators.specificText.types.endsWith@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- dateOccurringOperatorList -->
+	<div class="insp-menu" role="menu" id="dateOccurringOperatorList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.operators.dateOccurring.types.today@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.operators.dateOccurring.types.yesterday@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.operators.dateOccurring.types.tomorrow@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.operators.dateOccurring.types.last7Days@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.operators.dateOccurring.types.thisMonth@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="5">@conditionalFormat.operators.dateOccurring.types.lastMonth@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.operators.dateOccurring.types.nextMonth@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="7">@conditionalFormat.operators.dateOccurring.types.thisWeek@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="8">@conditionalFormat.operators.dateOccurring.types.lastWeek@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="9">@conditionalFormat.operators.dateOccurring.types.nextWeek@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- topBottomRulesList -->
+	<div class="insp-menu" role="menu" id="topBottomRulesList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.topBottom.values.top10@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="7">@conditionalFormat.ruleTypes.topBottom.values.average@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- top10OperatorList -->
+	<div class="insp-menu" role="menu" id="top10OperatorList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.operators.top10.types.top@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.operators.top10.types.bottom@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- averageOperatorList -->
+	<div class="insp-menu" role="menu" id="averageOperatorList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.operators.average.types.above@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.operators.average.types.below@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.operators.average.types.equalOrAbove@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.operators.average.types.equalOrBelow@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.operators.average.types.above1StdDev@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="5">@conditionalFormat.operators.average.types.below1StdDev@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.operators.average.types.above2StdDev@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="7">@conditionalFormat.operators.average.types.below2StdDev@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="8">@conditionalFormat.operators.average.types.above3StdDev@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="9">@conditionalFormat.operators.average.types.below3StdDev@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- dataBarMinimumTypeList -->
+	<div class="insp-menu" role="menu" id="dataBarMinimumTypeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.dataBars.valueTypes.number@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.ruleTypes.dataBars.valueTypes.lowestValue@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.ruleTypes.dataBars.valueTypes.percent@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.dataBars.valueTypes.percentile@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="5">@conditionalFormat.ruleTypes.dataBars.valueTypes.automin@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.ruleTypes.dataBars.valueTypes.formula@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- dataBarMaximumTypeList -->
+	<div class="insp-menu" role="menu" id="dataBarMaximumTypeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.dataBars.valueTypes.number@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.ruleTypes.dataBars.valueTypes.highestValue@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.ruleTypes.dataBars.valueTypes.percent@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.dataBars.valueTypes.percentile@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.ruleTypes.dataBars.valueTypes.formula@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="7">@conditionalFormat.ruleTypes.dataBars.valueTypes.automax@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- dataBarDirectionList -->
+	<div class="insp-menu" role="menu" id="dataBarDirectionList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.dataBars.directions.leftToRight@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.ruleTypes.dataBars.directions.rightToLeft@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- dataBarAxisPositionList -->
+	<div class="insp-menu" role="menu" id="dataBarAxisPositionList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.dataBars.axisPositions.automatic@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.ruleTypes.dataBars.axisPositions.cellMidPoint@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.ruleTypes.dataBars.axisPositions.none@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- colorScaleList -->
+	<div class="insp-menu" role="menu" id="colorScaleList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="8">@conditionalFormat.ruleTypes.colorScales.values.twoColors@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="9">@conditionalFormat.ruleTypes.colorScales.values.threeColors@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- colorScaleMinTypeList -->
+	<div class="insp-menu" role="menu" id="colorScaleMinTypeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.colorScales.valueTypes.number@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.ruleTypes.colorScales.valueTypes.lowestValue@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.ruleTypes.colorScales.valueTypes.percent@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.colorScales.valueTypes.percentile@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.ruleTypes.colorScales.valueTypes.formula@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- colorScaleMinTypeList -->
+	<div class="insp-menu" role="menu" id="colorScaleMidTypeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.colorScales.valueTypes.number@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.ruleTypes.colorScales.valueTypes.percent@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.colorScales.valueTypes.percentile@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.ruleTypes.colorScales.valueTypes.formula@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- colorScaleMaxTypeList -->
+	<div class="insp-menu" role="menu" id="colorScaleMaxTypeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.colorScales.valueTypes.number@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.ruleTypes.colorScales.valueTypes.highestValue@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.ruleTypes.colorScales.valueTypes.percent@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.colorScales.valueTypes.percentile@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">@conditionalFormat.ruleTypes.colorScales.valueTypes.formula@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- iconSetTypeList -->
+	<div class="insp-menu" role="menu" id="iconSetTypeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">@conditionalFormat.ruleTypes.iconSets.types.threeArrowsColored@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.ruleTypes.iconSets.types.threeArrowsGray@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="2">@conditionalFormat.ruleTypes.iconSets.types.threeTriangles@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="3">@conditionalFormat.ruleTypes.iconSets.types.threeStars@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.iconSets.types.threeFlags@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="5">
+				@conditionalFormat.ruleTypes.iconSets.types.threeTrafficLightsUnrimmed@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="6">
+				@conditionalFormat.ruleTypes.iconSets.types.threeTrafficLightsRimmed@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="7">@conditionalFormat.ruleTypes.iconSets.types.threeSigns@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="8">@conditionalFormat.ruleTypes.iconSets.types.threeSymbolsCircled@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="9">@conditionalFormat.ruleTypes.iconSets.types.threeSymbolsUncircled@
+			</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="10">@conditionalFormat.ruleTypes.iconSets.types.fourArrowsColored@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="11">@conditionalFormat.ruleTypes.iconSets.types.fourArrowsGray@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="12">@conditionalFormat.ruleTypes.iconSets.types.fourRedToBlack@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="13">@conditionalFormat.ruleTypes.iconSets.types.fourRatings@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="14">@conditionalFormat.ruleTypes.iconSets.types.fourTrafficLights@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="15">@conditionalFormat.ruleTypes.iconSets.types.fiveArrowsColored@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="16">@conditionalFormat.ruleTypes.iconSets.types.fiveArrowsGray@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="17">@conditionalFormat.ruleTypes.iconSets.types.fiveRatings@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="18">@conditionalFormat.ruleTypes.iconSets.types.fiveQuarters@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="19">@conditionalFormat.ruleTypes.iconSets.types.fiveBoxes@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- iconSetCriteriaOperatorList -->
+	<div class="insp-menu" role="menu" id="iconSetCriteriaOperatorList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">>=</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="0">></div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+	<!-- iconSetCriteriaTypeList -->
+	<div class="insp-menu" role="menu" id="iconSetCriteriaTypeList">
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="1">@conditionalFormat.ruleTypes.iconSets.valueTypes.number@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="4">@conditionalFormat.ruleTypes.iconSets.valueTypes.percent@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="7">@conditionalFormat.ruleTypes.iconSets.valueTypes.formula@</div>
+			<div class="shortcut"></div>
+		</div>
+		<div class="menu-item">
+			<div class="image"></div>
+			<div class="text localize" data-value="5">@conditionalFormat.ruleTypes.iconSets.valueTypes.percentile@</div>
+			<div class="shortcut"></div>
+		</div>
+	</div>
+</div>

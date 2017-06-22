@@ -10,4 +10,4 @@ To assemble the project you need to install Node.js of version 6 oh higher;
 
 How it was done:
 The application uses Webpack as a module bundler for TypeScript modules. Angular.io as a visualize framework. And Grape City SpreadSheet as a main component.
-This example is heavelly based on [Example](http://spread.grapecity.com/Demos/JS/InspectorSample/ "InspectorSample")[link:] example.
+This example is heavelly based on [InspectorSample](http://spread.grapecity.com/Demos/JS/InspectorSample/) example.
